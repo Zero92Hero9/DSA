@@ -1,0 +1,23 @@
+import java.util.List;
+import java.util.ArrayList;
+
+class Node {
+	int val;
+	List<Node> children;
+
+	public Node(int val) {
+		this.val = val;
+		this.children = new ArrayList<>();
+	}
+
+	public Node addChild(int val) {
+		Node childNode = new Node(val);
+		this.children.add(childNode);
+		return childNode;
+	}
+
+	
+}
+
+
+
