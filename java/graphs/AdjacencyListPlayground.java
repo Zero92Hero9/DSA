@@ -43,6 +43,21 @@ class CGraph {
 		return edgeList[vertexIndex1].contains(vertexIndex2);
 	}
 
+	public int shortestPath(String start, String end) {
+		int vertexIndex1 = vertexMap.get(start);
+		int vertexIndex2 = vertexMap.get(end);
+		int distance = 0;
+
+		if (isConnected(start, end)) {
+			return 1;
+		} else {
+
+		}
+
+
+		return distance;
+	}
+
 	public void printGraph() {
 		for(int i = 0; i < edgeList.length; i++) {
 			System.out.print(i + "->");
@@ -60,6 +75,7 @@ public class AdjacencyListPlayground {
 		cg.addEdge("a", "b");
 		cg.addEdge("a", "c");
 		cg.addEdge("b", "d");
+		cg.addEdge("c", "d");
 
 		cg.printGraph();
 		System.out.println(cg.isConnected("a", "c"));
